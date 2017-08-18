@@ -1,0 +1,20 @@
+
+ {{#if tasks}}
+ <ul class="list-group">
+     {{#each tasks}}
+  <li class="list-group-item">
+      <h3>{{this.title}}</h3>
+      <p>{{this.description}}</p>
+      
+      <a href = "delete/{{this._id}}" class = "btn btn-danger" >Delete</a>
+        <a href = "update/{{this._id}}" class = "btn btn-primary" >Update</a>
+        
+        
+      </li>
+     {{/each}}
+</ul> 
+{{else}}
+ <h2>No items to display</h2>
+{{/if}}
+<hr>
+<a href = "/add" class = "btn btn-primary" >Add Item</a>
